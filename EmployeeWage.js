@@ -1,23 +1,32 @@
-console.log("Welcome to Employee Wage Computation Problem");
-// UC1
-let attendance = Math.floor(Math.random()*2);
-if (attendance === 1){
-    console.log("Employee is prasent");
-}else {
-    console.log("Employee is absent ")
+//UC5: Employee Wage per Month
+
+const workingDays = 20;
+const wagePerHour = 20;
+var employeeHour;
+
+let attendance = Math.floor(Math.random()*3);
+
+switch(attendance) {
+    case 0 :
+        console.log("Employee is Absent");
+        employeeHour = 0;     
+        break;
+    case 1 :
+        console.log("Employee is Present");
+        employeeHour = 8;
+        break;
+    case 2 :
+        console.log("Employee is Part-Time");
+        employeeHour = 4;
+        break;
+    default:
+        console.log("Invalid");
+        break
 }
-// UC2
-var wagePerHour = 20;
-var fullDayHour = 8;
-var partTimeHour = 4;
-
-let dailyEmployeeWage = attendance * wagePerHour * fullDayHour;
-let partTimeWage = wagePerHour * partTimeHour;
-
-if (attendance == 1) {
+let dailyEmployeeWage = employeeHour * wagePerHour;
+let empWagePerMonth = dailyEmployeeWage * workingDays;
 console.log("Employee Daily Wage : "+dailyEmployeeWage);
-} else if (attendance == 0){
-    console.log("Employee Daily Wage : "+dailyEmployeeWage);
-} else {
-    console.log("Employee Part-Time Wage : "+partTimeWage);
-}
+console.log("Employee Wage per Month : "+empWagePerMonth);
+
+
+
