@@ -7,13 +7,17 @@ if (attendance === 1){
     console.log("Employee is absent ")
 }
 // UC2
-
 var wagePerHour = 20;
 var fullDayHour = 8;
+var partTimeHour = 4;
 
 let dailyEmployeeWage = attendance * wagePerHour * fullDayHour;
-if (attendance === 1) {
-    console.log("Employee Wage per Day : "+dailyEmployeeWage);
-}else {
-    console.log("Employee Wage per Day : "+dailyEmployeeWage);
+let partTimeWage = wagePerHour * partTimeHour;
+
+if (attendance == 1) {
+console.log("Employee Daily Wage : "+dailyEmployeeWage);
+} else if (attendance == 0){
+    console.log("Employee Daily Wage : "+dailyEmployeeWage);
+} else {
+    console.log("Employee Part-Time Wage : "+partTimeWage);
 }
